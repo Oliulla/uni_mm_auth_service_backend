@@ -1,0 +1,20 @@
+import express, { Request, Response, Application } from "express";
+import cors from 'cors';
+const app: Application = express()
+
+app.use(cors());
+
+// parser
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
+
+// testing
+app.get('/', (req: Request, res: Response) => {
+  res.send({
+    status: true,
+    message: "Success"
+  })
+})
+
+export default app;
