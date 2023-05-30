@@ -8,9 +8,3 @@ export default {
   database_url: process.env.DATABASE_URL,
   node_env: process.env.NODE_ENV,
 }
-
-// univ_admin
-// OHlnaAAWjlfsBg6W
-
-// univ_admin2
-//Hzt3UUctCuGztYN5
