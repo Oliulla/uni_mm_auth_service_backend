@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // testing
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (req: Request, res: any) => {
   res.send({
     status: true,
     message: "Success",
