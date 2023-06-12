@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-expressions */
 import { Request, Response, NextFunction, ErrorRequestHandler } from "express";
@@ -71,8 +73,6 @@ const globalErrorHandler: ErrorRequestHandler = (
     errorMessages,
     stack: config.node_env !== "production" ? error?.stack : undefined,
   });
-
-  next();
 };
 
 export default globalErrorHandler;

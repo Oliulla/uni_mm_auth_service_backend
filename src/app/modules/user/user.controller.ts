@@ -4,7 +4,7 @@ import { UserService } from "./user.service";
 import { catchAsync } from "../../../shared/catchAsync";
 import sendResponse from "../../../shared/sendResponse";
 
-const createUser: RequestHandler = catchAsync(async (req, res, next) => {
+const createUser: RequestHandler = catchAsync(async (req, res) => {
   const { user } = req.body;
   const result = await UserService.createUser(user);
 
@@ -14,8 +14,6 @@ const createUser: RequestHandler = catchAsync(async (req, res, next) => {
     message: "User Created successfully",
     data: result,
   });
-
-  next();
 });
 
 export const UserController = {
