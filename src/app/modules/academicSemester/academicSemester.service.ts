@@ -138,7 +138,7 @@ const deleteSemester = async (
   return result;
 };
 
-export const academicSemesterService = {
+export const AcademicSemesterService = {
   createSemester,
   getAllSemesters,
   getSingleSemester,
