@@ -8,6 +8,7 @@ import { catchAsync } from "../../../shared/catchAsync";
 
 const createStudent: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
+    // console.log(req.cookies, "cookie");
     const { student, ...userData } = req.body;
     const result = await UserService.createStudent(student, userData);
 

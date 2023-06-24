@@ -5,7 +5,7 @@ import { StudentValidaion } from "./student.validation";
 const router = express.Router();
 
 router.get("/:id", StudentController.getAllSingleStudent);
-// router.delete("/:id", StudentController.deleteSingleStudent)
+router.delete("/:id", StudentController.deleteSingleStudent);
 router.patch(
   "/:id",
   validateRequest(StudentValidaion.updateStudentZodSchema),
